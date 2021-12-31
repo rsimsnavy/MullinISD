@@ -1,0 +1,37 @@
+/* CSS Document */
+.containercomandi {grid-template-areas: 'homepoints awaypoints flag' 'line1 line1 line1' 'timer yards hometimeouts' 'timer yards line2' 'timer yards awaytimeouts' 'line3 line3 line3' 'fractions overtime tentativi';}
+.comandicasa {grid-area: homepoints;}
+.comandiospite {grid-area: awaypoints;}
+.spyfoul {grid-area: flag;}
+.timertempo {grid-area: timer;}
+.yards {grid-area: yards;}
+.timeoutscasa {grid-area: hometimeouts;}
+.timeoutsospite {grid-area: awaytimeouts;}
+.moments {grid-area: fractions;}
+.overtime {grid-area: overtime;}
+.attempts {grid-area: tentativi;}
+.firstbreak {grid-area: line1;}
+.secondbreak {grid-area: line2;}
+.tirdbreak {grid-area: line3;}
+
+
+hr {width: 100%; border: solid 1px #777;}
+.yards {grid-template: auto / 1fr 1fr;}
+.yards p,
+.yards .resetfields, 
+.yards .yardsreset {grid-column: 1 / -1;}
+
+.yards .plusbutton {float: right;}
+.yards .minusbutton {float: left;}
+
+.yards .resetfields { width: auto; max-width: 80px; margin: auto;}
+.yards .resetfields input {width: calc(100% - 3px); padding: 5px 0px; border: 1.5px solid white; border-radius: 10px; box-shadow: 0 3px #333; text-align: center; font-family: 'Oswald', sans-serif; font-size: 1.6em; color: white; background: transparent;}
+
+
+@media (max-width: 600px) {
+	.containercomandi {grid-template: auto / 1fr 1fr; grid-gap: 10px;  grid-template-areas: 'homepoints awaypoints' 'line1 line1' 'tentativi flag' 'line2 line2' 'timer yards' 'line3 line3' 'hometimeouts awaytimeouts' 'fractions overtime';}
+	.comandi {grid-gap: 7px;}
+	button {min-height: 30px; padding: 4px;}
+}
+
+@media (max-width: 499px) {.containercomandi button {min-height: 30px; padding: 4px;} }
