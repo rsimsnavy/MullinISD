@@ -1,0 +1,17 @@
+*{
+	margin: 0;
+	border: 0;
+	color: white;
+}
+
+.inner{
+	width: 1920px;
+	height: 1080px;
+	display: flex;
+	justify-content: center;
+}
+.scoreboard{
+	width: 30%;
+	height: 200px;
+	background-color: gray;
+}
