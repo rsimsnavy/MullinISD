@@ -1,4 +1,6 @@
 /* template football*/
+@import url('schema.css');
+
 .sgrlogo, .sgrlogo:before {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px; }
@@ -68,6 +70,7 @@
 
 /* timeouts */
 .containertimeouts {
+	background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -76,10 +79,11 @@
 
 .boxtimeouts {
   width: calc(100% / 3);
+	background-color: #FCF506;
   margin: 0.5vw 1vw; }
 
 .boxon {
-  background: var(--yellow); }
+  background-color: yellow; }
 
 /* flag */
 .boxfoul {

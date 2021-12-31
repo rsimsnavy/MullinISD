@@ -1,0 +1,73 @@
+/* CSS Document */
+@import url("https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700");
+
+:root { 
+  --white: #fff;
+  --text: #333;
+  --textinverted: #eee;
+  --bkg: #eee;
+  --bkgwhite: #fff;
+  --bkggrey: #ccc;
+  --bkgdark: #333;
+  --bkgovertime: #900;
+  --yellow: #FCF506;
+  --red: #fc0303;
+  --linee: #999; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+strong, em {
+  font-weight: normal;
+  font-style: normal; }
+
+.container {
+  width: 100%;
+  display: grid;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3vw; }
+
+.sgrlogo {
+  position: relative;
+  background-size: contain !important; }
+
+.sgrlogo:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--white);
+  z-index: -1; }
+
+.box {
+  text-align: center; }
+
+.boxhomepoints, .boxawaypoints, .space {
+  font-weight: bold; }
+
+.boxmoment span {
+  white-space: nowrap; }
+
+.space {
+  text-align: center; }
+
+.boxhometeam, .boxawayteam {
+  background: var(--bkg); }
+
+.boxtimer, .boxmoment {
+  color: var(--textinverted); }
+
+.boxhomepoints, .boxawaypoints, .space {
+  background: var(--bkggrey); }
+
+.boxtimer {
+  background: var(--bkgdark); }
+
+.boxmoment {
+  background: var(--bkgdark); }
+
+.boxovertimeon {
+  background: var(--bkgovertime); }
