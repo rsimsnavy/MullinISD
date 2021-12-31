@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mullin ISD Scoreboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./css/football.css" />
+	<script src="./js/help.js"></script>
+    <script src="./js/board.js"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="appname">
+            <h2>FlexyScore</h2>
+            <p>Football Board</p>
+        </div>
+
+        <div class="containercomandi containercomandifootball">
+
+            <div class="comandi comandipoints comandicasa">
+    <p class="team value"><em id="team_1"></em><em id="points_1"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'points_1', 999, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'points_1', 999, 0)">-</button>
+    <button class="button resetbutton textbutton" onclick="resetSimpleData('resetgeneric', 'points_1')">RESET</button>
+</div>    
+        
+            <div class="comandi comandipoints comandiospite">
+    <p class="team value"><em id="team_2"></em><em id="points_2"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'points_2', 999, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'points_2', 999, 0)">-</button>
+    <button class="button resetbutton textbutton" onclick="resetSimpleData('resetgeneric', 'points_2')">RESET</button>
+</div>
+    
+
+            <div class="module timertempo">
+	
+<p><em id="timer"></em></p>
+<div class="ttfeatures">
+    <div class="startstop">
+        <button class="textbutton timerstart" onclick="startTimer(-1)">START</button>
+        <button class="textbutton timerstop" onclick="stopTimer()">STOP</button>
+    </div>
+    <div class="reset">
+        <p>Set Time [min:sec]</p>
+        <div class="resetfields">
+            <input type="number" id="newtimermin">
+            <em>:</em>
+            <input type="number" id="newtimersec">
+        </div>
+        <button class="textbutton timerreset" onclick="resetTimer()">SET</button>
+    </div>
+</div>
+	
+</div>       
+            <div class="moments">
+        <p class="label">Quarter <em id="moment"></em></p>
+        <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'moment', 30, 0)">+</button>
+        <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'moment', 30, 0)">-</button>
+</div>        
+            <div class="overtime">
+    <p class="label">Overtime Mode <em id="overtime" class="off">OFF</em></p>
+    <button class="button textbutton" onclick="onOffMode('invert', 'overtime')">SWITCH</button>
+</div>
+            <div class="comandi comanditimeouts comandicasa timeoutscasa">
+    <p class="label">Home Timeout <em class="value" id="timeouts_1"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'timeouts_1', 30, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'timeouts_1', 30, 0)">-</button>
+</div>
+
+            <div class="comandi comanditimeouts comandiospite timeoutsospite">
+    <p class="label">Away Timeout <em class="value" id="timeouts_2"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'timeouts_2', 30, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'timeouts_2', 30, 0)">-</button>
+</div>
+        
+            <div class="comandi attempts">
+    <p class="label" >Down <em class="value" id="attempts"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 1, 'attempts', 20, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -1, 'attempts', 20, 0)">-</button>
+</div>
+     
+            <div class="comandi yards">
+
+    <p class="label">Yards <em class="value" id="yards"></em></p>
+    <button class="button plusbutton" onclick="alterSimpleDataLimited('altergeneric', 5, 'yards', 999, 0)">+</button>
+    <button class="button minusbutton" onclick="alterSimpleDataLimited('altergeneric', -5, 'yards', 999, 0)">-</button>
+
+
+     <p>Set Yards</p>
+     <div class="resetfields">
+         <input type="number" id="newyards">
+     </div>
+     <button class="yardsreset textbutton" onclick="resetYards('resetgeneric', 'yards')">SET</button>
+    
+
+</div>
+       
+            <div class="comandi spyfoul">
+    <p class="label">Foul Signal</p>
+    <button class="button textbutton" onclick="onOffMode('invert', 'foul_signal')">FLAG</button>
+</div>
+			
+			<div id="connalert" class="connectionalert connectionalertoff"><p>Console and scoreboard lost connection, please reload live score page</p></div>
+			<hr class="firstbreak"><hr class="secondbreak"><hr class="tirdbreak">
+        </div>
+
+        <div class="dashboardurl" id="url">
+
+        </div>
+
+        <div class="menubottom">
+            <button class="copylink button textbutton" onclick="copyLink()">COPY LINK</button>
+<button class="backtomenu button textbutton" onclick="backToMenu()">PAUSE</button>        </div>
+
+    </div>
+    <script>
+        prepareDashboard()
+    </script>
+
+
+</body>
+
+</html>

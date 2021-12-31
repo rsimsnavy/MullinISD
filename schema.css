@@ -54,9 +54,6 @@ strong, em {
 .space {
   text-align: center; }
 
-.boxhometeam, .boxawayteam {
-  background: var(--bkg); }
-
 .boxtimer, .boxmoment {
   color: var(--textinverted); }
 

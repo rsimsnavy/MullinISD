@@ -18,7 +18,7 @@
 
 /* posizioni */
 .container {
-  grid-template: auto 1.7vw/5% 23% minmax(3%, auto) 2% minmax(3%, auto) 23% 10% 10% 10% 10%; }
+  grid-template: auto 1.7vw/5% 23% minmax(3%, auto) 2% minmax(3%, auto) 23% 10% 15% 10% 10%; }
 
 .sgrlogo {
   grid-column: 1/2;
@@ -26,7 +26,10 @@
 
 .boxhometeam {
   grid-column: 2/3;
-  grid-row: 1/2; }
+  grid-row: 1/2; 
+	background-color: #38007C;
+	color:#FDD700;
+}
 
 .boxawayteam {
   grid-column: 6/7;
