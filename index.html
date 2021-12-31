@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width-device-width, initial-scale=1.0"> 
-	<title>Scoreboard</title>
-	<link rel="stylesheet" href="style.css">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Live Football</title>
+    <link rel="stylesheet" href="../dirette/temp/css/football.css">
 </head>
+
 <body>
-	<div class="inner">
-		<div class="scoreboard">
-			<div class="score" id="HomeScore"></div>
-			<div class="score" id="VistorScore"></div>
-			<div class="team" id="Home"></div>
-			<div class="team" id="Visitor"></div>
-			<div class="time" id="GameClock"></div>
-	  </div>
-	</div>
-</body>
-</html>
+    <section id="boxes">
+
+        <div class="container containerfootball">
+        	<div class="sgrlogo"></div>
+            <div class="box boxtimer" id="timer">15:00</div>
+            <div class="box boxteams boxhometeam" id="team_1">team_1</div>
+            <div class="box boxpoints boxhomepoints" id="points_1">0</div>
+            <div class="box space">-</div>
+            <div class="box boxpoints boxawaypoints" id="points_2">0</div>
+            <div class="box boxteams boxawayteam" id="team_2">team_2</div>
+			
+            <div class="box boxattempts">
+				<span id="attempts">1</span><span id="suffixattempts">st</span><span class="end">&amp;</span><span class="box boxyards" id="yards">0</span>
+			</div>
+
+            <div class="box boxmoment boxovertimeoff" id="ovt">
+				<span><em id="overtime">Q</em><strong id="moment">1</strong></span>
+			</div>
+            <div class="box boxfoul boxfouloff" id="foulsignal"></div>
+			
+			<div class="containertimeouts timeoutshome">
+            	<div class="box boxtimeouts boxhometimeouts" id="ht1"></div>
+            	<div class="box boxtimeouts boxhometimeouts" id="ht2"></div>
+            	<div class="box boxtimeouts boxhometimeouts" id="ht3"></div>
+			</div>
+			
+			<div class="containertimeouts timeoutsaway">
+            	<div class="box boxtimeouts boxawaytimeouts" id="at1"></div>
+            	<div class="box boxtimeouts boxawaytimeouts" id="at2"></div>
+            	<div class="box boxtimeouts boxawaytimeouts" id="at3"></div>
+			</div>
+        </div>
+
+    </section>
+
+    <script type="text/javascript" src="../dirette/temp/js/ajax/generalfeatures.js"></script>
+    <script type="text/javascript" src="../dirette/temp/js/ajax/livefootballajax.js"></script>
+<script>setLogo('logofs.svg');</script><script>loadFootballRequest(1388);</script></body></html>
